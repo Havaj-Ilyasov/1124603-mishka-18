@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Хаваж Ильясов](https://up.htmlacademy.ru/adaptive/18/user/1124603).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Кривокора](https://htmlacademy.ru/profile/krivokora).
 
 ---
 
