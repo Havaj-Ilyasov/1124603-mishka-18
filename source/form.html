@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Вязание на заказ</title>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <a class="page-header__logo logo">
+      <img class="logo__image" src="https://via.placeholder.com/86x35" width="86" height="35"
+        alt="Логотип интернет-магазина 'Мишка'">
+    </a>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle">Открыть меню</button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a href="#" class="site-list__link">Каталог товаров</a>
+        </li>
+        <li class="site-list__item">
+          <a href="#" class="site-list__link">Вязание на заказ</a>
+        </li>
+        <li class="site-list__item">
+          <span class="site-list__icon"></span>
+          <a href="" class="site-list__link">Поиск по сайту</a>
+        </li>
+        <li class="site-list__item">
+          <span class="site-list__icon"></span>
+          <a href="" class="site-list__link">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Вязание на заказ</h1>
+
+    <section class="knit-order">
+      <h2 class="visually-hidden">Форма для заказа</h2>
+      <p class="knit-order__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
+        свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="knit-order__form form-order" action="https://echo.htmlacademy.ru.">
+        <fieldset>
+          <legend class="form-order__title">Тип</legend>
+          <ul class="form-order__list">
+            <li class="form-order__item">
+              <label>
+                <input type="radio" name="type" value="interior-accessory" checked>
+                Аксессуар для интерьера
+              </label>
+            </li>
+            <li class="form-order__item">
+              <label>
+                <input type="radio" name="type" value="children-toy">
+                Детская игрушка
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="form-order__title">Цвет</legend>
+          <ul class="form-order__list">
+            <li class="form-order__item">
+              <label>
+                <input type="checkbox" name="white" checked>
+                Белый
+              </label>
+            </li>
+            <li class="form-order__item">
+              <label>
+                <input type="checkbox" name="grey" checked>
+                Серый
+              </label>
+            </li>
+            <li class="form-order__item">
+              <label>
+                <input type="checkbox" name="tiffany">
+                «Тиффани»
+              </label>
+            </li>
+            <li class="form-order__item">
+              <label>
+                <input type="checkbox" name="black">
+                Черный
+              </label>
+            </li>
+            <li class="form-order__item">
+              <label>
+                <input type="checkbox" name="pink">
+                Розовый
+              </label>
+            </li>
+            <li class="form-order__item">
+              <label>
+                <input type="checkbox" name="orange">
+                Оранжевый
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="form-order__title">ФИО</legend>
+          <ul class="form-order__list">
+            <li class="form-order__item">
+              <label for="form-order__first-name">Имя:</label>
+              <input id="form-order__first-name" type="text" placeholder="Введите ваше имя*">
+            </li>
+            <li class="form-order__item">
+              <label for="form-order__second-name">Фамилия:</label>
+              <input id="form-order__second-name" type="text" placeholder="Укажите фамилию*">
+            </li>
+            <li class="form-order__item">
+                <label for="form-order__patronymic">Отчество:</label>
+                <input id="form-order__patronymic" type="text" placeholder="Отчество, если желаете">
+              </li>
+          </ul>
+
+            <label class="form-order__title" for="form-order__tel">Тел</label>
+            <input id="form-order__tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+
+            <label class="form-order__title" for="form-order__email">E-mail</label>
+            <input id="form-order__email" type="email" placeholder="Ваш Email*">
+
+            <label class="form-order__title" for="form-order__optionally">Доп</label>
+            <textarea id="form-order__optionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+
+            <small class="form-order__sub-text">*Поля обязательны для заполнения</small>
+            <button class="form-order__button" type="submit">Отправить заказ</button>
+
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <section class="page-footer__social social">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link" href="instagram.com">
+            <span class="visually-hidden">Instagram</span>
+            <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="Instagram">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="facebook.com">
+            <span class="visually-hidden">Facebook</span>
+            <img src="https://via.placeholder.com/28x15" width="28" height="15" alt="Facebook">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="twitter.com">
+            <span class="visually-hidden">Twitter</span>
+            <img src="https://via.placeholder.com/23x20" width="23" height="20" alt="Twitter">
+          </a>
+        </li>
+      </ul>
+    </section>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
+    </div>
+  </footer>
