@@ -1,0 +1,44 @@
+.product-of-week {
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  background-color: #ffffff;
+  &__title {
+    font-size: 25px;
+    line-height: 30px;
+
+    color: #000000;
+  }
+  &__subtitle {
+    font-size: 17px;
+    line-height: 20px;
+
+    color: #63d1bb;
+  }
+  &__descr {
+    font-size: 15px;
+    line-height: 24px;
+
+    color: #444444;
+  }
+  &__specifics {
+    font-size: 15px;
+    line-height: 20px;
+
+    color: #444444;
+  }
+  &__price {
+    font-size: 17px;
+    line-height: 24px;
+
+    color: #444444;
+  }
+  &__order {
+    font-size: 17px;
+    line-height: 20px;
+
+    color: #444444;
+  }
+}
+
+
