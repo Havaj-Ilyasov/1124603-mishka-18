@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -39,8 +41,9 @@ a {
   color: #000000;
 }
 
-@import "blocks/page-header/page-header.scss";
-@import "blocks/product-of-week/product-of-week.scss";
-@import "blocks/features/features.scss";
-@import "blocks/page-footer/page-footer.scss";
-@import "blocks/catalog/catalog.scss";
+@import "blocks/page-header.scss";
+@import "blocks/promo.scss";
+@import "blocks/product-of-week.scss";
+@import "blocks/features.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/catalog.scss";
