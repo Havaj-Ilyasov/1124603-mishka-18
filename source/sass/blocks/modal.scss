@@ -1,0 +1,38 @@
+.modal {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  background-color: $white;
+  border: 1px solid $greyBorder;
+}
+
+.modal__title {
+  text-transform: uppercase;
+}
+
+.modal__subtitle {
+  font-size: 15px;
+  line-height: 30px;
+  color: $greyishBrown;
+}
+
+.modal__list {
+  @include resetList;
+}
+
+.modal__item {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 16px;
+  color: $greyishBrown;
+}
+
+.modal__button {
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $white;
+
+  background-color: $seaFoamBlue;
+  border: none;
+}

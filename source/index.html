@@ -40,15 +40,15 @@
     <h1 class="visually-hidden">Интернет-магазин игрушек ручной работы "Мишка"</h1>
 
     <section class="promo">
-      <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
+      <h2 class="page-title page-title--color">Милые штуки ручной работы для дома</h2>
       <ul class="promo__list">
-        <li class="promo__item"><a href="#">Предметы интерьера</a></li>
-        <li class="promo__item"><a href="#">Детские игрушки</a></li>
+        <li class="promo__item"><a class="promo__link" href="#">Предметы интерьера</a class="promo__link"></li>
+        <li class="promo__item"><a class="promo__link" href="#">Детские игрушки</a></ class="promo__link"li>
       </ul>
     </section>
 
     <section class="product-of-week">
-      <h2 class="product-of-week__title">Вязаные корзинки</h2>
+      <h2 class="product-of-week__title section-title">Вязаные корзинки</h2>
       <strong class="product-of-week__subtitle">Товар недели</strong>
       <p class="product-of-week__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трех
         размерах.</p>
@@ -73,22 +73,22 @@
 
     <section class="features">
       <h2 class="visually-hidden">Список преимуществ</h2>
-      <b class="features__title">Коротко о нас:</b>
+      <b class="features__title section-title">Коротко о нас:</b>
       <ul class="features__list">
-        <li class="features-item">Экологически чистые материалы</li>
-        <li class="features-item">Скандинавский стиль по российской цене</li>
-        <li class="features-item">Увеличивает лайки на фотографиях</li>
-        <li class="features-item">Связано вручную с любовью и умилением</li>
-        <li class="features-item">Поддержка отечественного производителя</li>
-        <li class="features-item">Поставляется в подарочной упаковке</li>
+        <li class="features__item">Экологически чистые материалы</li>
+        <li class="features__item">Скандинавский стиль по российской цене</li>
+        <li class="features__item">Увеличивает лайки на фотографиях</li>
+        <li class="features__item">Связано вручную с любовью и умилением</li>
+        <li class="features__item">Поддержка отечественного производителя</li>
+        <li class="features__item">Поставляется в подарочной упаковке</li>
       </ul>
     </section>
 
     <section class="reviews">
-      <h2 class="reviews__title">Отзывы</h2>
+      <h2 class="reviews__title section-title">Отзывы</h2>
       <ul class="reviews__list">
         <li class="rewiews__item">
-          <blockquote>
+          <blockquote class="quote">
             <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества
               лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
               фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -97,16 +97,16 @@
           </blockquote>
           <button class="reviews__prev reviews__button" type="button" aria-label="Предыдущий отзыв"></button>
           <button class="reviews__next reviews__button" type="button" aria-label="Следующий отзыв"></button>
-          <a class="reviews__button-to-write">Написать</a>
+          <a class="reviews__button-write">Написать</a>
         </li>
       </ul>
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
+      <h2 class="contacts__title section-title">Контакты</h2>
       <p class="contacts__email">
         e-mail:
-        <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        <a class="contacts__email-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
       </p>
       <address class="contacts__address">
         адрес:
@@ -114,7 +114,7 @@
       </address>
       <section class="contacts__map map">
         <h2 class="visually-hidden">Адрес интернет-магазина "Мишка" на карте</h2>
-        <img class="map__image" src="https://via.placeholder.com/322x457" width="322" height="457"
+        <img class="map__image" src="img/map-mobile@1x.jpg" width="322" height="457"
           alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
       </section>
       <a class="contacts__write">Напишите нам</a>
@@ -151,21 +151,21 @@
     </div>
   </footer>
 
-  <section class="modal-cart modal">
-    <h2 class="modal-cart__title">Добавить в корзину</h2>
-    <p class="modal-cart__subtitle">Выберите размер:</p>
-    <ul class="modal-cart__list">
-      <li class="modal-cart__item">
+  <section class="modal">
+    <h2 class="modal__title section-title">Добавить в корзину</h2>
+    <p class="modal__subtitle">Выберите размер:</p>
+    <ul class="modal__list">
+      <li class="modal__item">
         <input type="radio" name="size">S
       </li>
-      <li class="modal-cart__item">
+      <li class="modal__item">
         <input type="radio" name="size">M
       </li>
-      <li class="modal-cart__item">
+      <li class="modal__item">
         <input type="radio" name="size">L
       </li>
     </ul>
-    <button class="modal-cart__add" type="button">Добавить</button>
+    <button class="modal__button" type="button">Добавить</button>
   </section>
 
 </body>
