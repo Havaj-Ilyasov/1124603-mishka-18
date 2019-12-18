@@ -4,14 +4,11 @@
 
   font-size: 17px;
   line-height: 24px;
-  color: #000000;
+  color: $black;
 
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .main-nav__list {
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
+  @include resetList;
 }

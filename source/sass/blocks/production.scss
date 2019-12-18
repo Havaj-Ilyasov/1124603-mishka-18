@@ -1,0 +1,28 @@
+.production {
+  padding-top: 29px;
+  padding-bottom: 33px;
+
+  background-color: $white;
+}
+
+.production__title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $black;
+
+}
+
+.production__descr {
+  font-size: 13px;
+  line-height: 24px;
+  color: $greyishBrown;
+}
+
+.production__order {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $greyishBrown;
+}

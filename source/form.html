@@ -38,14 +38,14 @@
 
   <main>
 
-    <h1>Вязание на заказ</h1>
+    <h1 class="page-title">Вязание на заказ</h1>
 
     <section class="knit-order">
       <h2 class="visually-hidden">Форма для заказа</h2>
       <p class="knit-order__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.</p>
       <form class="knit-order__form form-order" action="https://echo.htmlacademy.ru.">
-        <fieldset>
+        <fieldset class="form-order__group">
           <legend class="form-order__title">Тип</legend>
           <ul class="form-order__list">
             <li class="form-order__item">
@@ -62,7 +62,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="form-order__group">
           <legend class="form-order__title">Цвет</legend>
           <ul class="form-order__list">
             <li class="form-order__item">
@@ -103,31 +103,31 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="form-order__group">
           <legend class="form-order__title">ФИО</legend>
           <ul class="form-order__list">
             <li class="form-order__item">
               <label for="form-order__first-name">Имя:</label>
-              <input id="form-order__first-name" type="text" placeholder="Введите ваше имя*">
+              <input class="form-order__input" id="form-order__first-name" type="text" placeholder="Введите ваше имя*">
             </li>
             <li class="form-order__item">
               <label for="form-order__second-name">Фамилия:</label>
-              <input id="form-order__second-name" type="text" placeholder="Укажите фамилию*">
+              <input class="form-order__input" id="form-order__second-name" type="text" placeholder="Укажите фамилию*">
             </li>
             <li class="form-order__item">
                 <label for="form-order__patronymic">Отчество:</label>
-                <input id="form-order__patronymic" type="text" placeholder="Отчество, если желаете">
+                <input class="form-order__input" id="form-order__patronymic" type="text" placeholder="Отчество, если желаете">
               </li>
           </ul>
 
             <label class="form-order__title" for="form-order__tel">Тел</label>
-            <input id="form-order__tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <input class="form-order__input" id="form-order__tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
 
             <label class="form-order__title" for="form-order__email">E-mail</label>
-            <input id="form-order__email" type="email" placeholder="Ваш Email*">
+            <input class="form-order__input" id="form-order__email" type="email" placeholder="Ваш Email*">
 
             <label class="form-order__title" for="form-order__optionally">Доп</label>
-            <textarea id="form-order__optionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="form-order__textarea" id="form-order__optionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
 
             <small class="form-order__sub-text">*Поля обязательны для заполнения</small>
             <button class="form-order__button" type="submit">Отправить заказ</button>

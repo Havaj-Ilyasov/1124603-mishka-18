@@ -1,0 +1,60 @@
+.form-order {
+  background-color: $white;
+}
+
+.form-order__group {
+  border: none;
+}
+
+.form-order__title {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $seaFoamBlue;
+}
+
+.form-order__list {
+  @include resetList;
+}
+
+.form-order__item {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 18px;
+  color: $black;
+}
+
+.form-order__input {
+  &::placeholder {
+    font-family: 'OpenSans', 'Arial', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    color: $greyOpacity;
+  }
+}
+
+.form-order__textarea {
+  &::placeholder {
+    font-family: 'OpenSans', 'Arial', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    color: $greyOpacity;
+  }
+}
+
+.form-order__sub-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: $greyishBrown;
+}
+
+.form-order__button {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $greyishBrown;
+
+  background-color: $white;
+}
