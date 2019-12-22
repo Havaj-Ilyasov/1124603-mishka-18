@@ -1,6 +1,26 @@
-.promo__list {
-  margin: 0;
-  padding: 0;
+.promo {
+  padding-top: 76px;
 
-  list-style: none;
+  background-color: $grey;
+}
+
+.promo__list {
+  @include resetList;
+}
+
+.promo__item {
+  &:nth-child(1) {
+    background-color: $seaFoamBlue;
+  }
+
+  &:nth-child(2) {
+    background-color: $greenyBlue;
+  }
+}
+
+.promo__link {
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $white;
 }

@@ -1,0 +1,40 @@
+.reviews {
+  padding-top: 30px;
+  padding-bottom: 45px;
+
+  background-color: $white;
+}
+
+.reviews__list {
+  @include resetList;
+}
+
+.reviews__text {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 30px;
+  color: $greyishBrown;
+}
+
+.reviews__author-name {
+  font-size: 17px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 24px;
+  color: $black;
+}
+
+.reviews__author-link {
+  font-size: 17px;
+  line-height: 30px;
+  color: $greyishBrown;
+}
+
+.reviews__button-write {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $greyishBrown;
+  text-transform: uppercase;
+}
