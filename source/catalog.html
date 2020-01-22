@@ -15,7 +15,7 @@
         alt="Логотип интернет-магазина 'Мишка'">
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle">Открыть меню</button>
+      <button class="main-nav__toggle"></button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a href="#" class="site-list__link">Каталог товаров</a>
@@ -36,16 +36,18 @@
   </header>
 
   <main>
-    <h1 class="page-title">Каталог товаров</h1>
-
     <section class="catalog">
+      <div class="catalog__title-wrap">
+        <h1 class="catalog__title">Каталог товаров</h1>
+      </div>
       <h2 class="visually-hidden">Список товаров</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
           <article class="catalog__product product">
             <h2 class="product__title">Зайчик-попрыгайчик</h2>
-            <img class="product__image" src="https://via.placeholder.com/260x195" width="260" height="195"
-              alt="Зайчик-попрыгайчик">
+            <p class="product__image-wrap">
+              <img class="product__image" src="" alt="Зайчик-попрыгайчик">
+            </p>
             <table class="product__specifics">
               <tr>
                 <td>Рост</td>
@@ -62,8 +64,9 @@
         <li class="catalog__item">
           <article class="catalog__product product">
             <h2 class="product__title">Корзинка для белья</h2>
-            <img class="product__image" src="https://via.placeholder.com/260x195" width="260" height="195"
-              alt="Корзинка для белья">
+            <p class="product__image-wrap">
+              <img class="product__image" src="" alt="Корзинка для белья">
+            </p>
             <table class="product__specifics">
               <tr>
                 <td>Диаметр</td>
@@ -80,8 +83,9 @@
         <li class="catalog__item">
           <article class="catalog__product product">
             <h2 class="product__title">Большая корзинка для игрушек</h2>
-            <img class="product__image" src="https://via.placeholder.com/260x195" width="260" height="195"
-              alt="Большая корзинка для игрушек">
+            <p class="product__image-wrap">
+              <img class="product__image" src="" alt="Большая корзинка для игрушек">
+            </p>
             <table class="product__specifics">
               <tr>
                 <td>Диаметр</td>
@@ -98,7 +102,7 @@
       </ul>
     </section>
 
-    <section class="production">
+    <!-- <section class="production">
       <h2 class="production__title">Процесс производства</h2>
       <img class="production__image" src="https://via.placeholder.com/260x150" width="260" height="150"
         alt="Процесс производства товаров">
@@ -106,40 +110,44 @@
       <p class="production__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
         появляются наши товары.</p>
       <a class="production__order">Сделать заказ</a>
-    </section>
+    </section> -->
 
   </main>
 
   <footer class="page-footer">
-    <ul class="social">
-      <li class="social__item">
-        <a class="social__link" href="instagram.com">
-          <span class="visually-hidden">Instagram</span>
-          <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="Instagram">
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="facebook.com">
-          <span class="visually-hidden">Facebook</span>
-          <img src="https://via.placeholder.com/28x15" width="28" height="15" alt="Facebook">
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link" href="twitter.com">
-          <span class="visually-hidden">Twitter</span>
-          <img src="https://via.placeholder.com/23x20" width="23" height="20" alt="Twitter">
-        </a>
-      </li>
-    </ul>
+    <a class="page-footer__logo logo">
+      <img src="img/logo-footer.svg" alt="">
+    </a>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="instagram.com">
+            <span class="visually-hidden">Instagram</span>
+            <img src="img/icon-insta.svg" width="22" height="21" alt="Instagram">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="facebook.com">
+            <span class="visually-hidden">Facebook</span>
+            <img src="img/icon-fb.svg" width="15" height="28" alt="Facebook">
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="twitter.com">
+            <span class="visually-hidden">Twitter</span>
+            <img src="img/icon-twitter.svg" width="23" height="20" alt="Twitter">
+          </a>
+        </li>
+      </ul>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">HTML Academy</span>
+        <img src="img/logo-htmlacademy.svg" alt="Логотип 'HTML Academy'">
       </a>
     </div>
   </footer>
 
-  <section class="modal-cart modal">
+  <!-- <section class="modal-cart modal">
     <h2 class="modal-cart__title">Добавить в корзину</h2>
     <p class="modal-cart__subtitle">Выберите размер:</p>
     <ul class="modal-cart__list">
@@ -154,7 +162,7 @@
       </li>
     </ul>
     <button class="modal-cart__add" type="button">Добавить</button>
-  </section>
+  </section> -->
 
 </body>
 

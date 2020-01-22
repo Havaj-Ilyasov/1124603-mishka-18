@@ -1,8 +1,23 @@
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
 .product__title {
+  margin: 0;
+
   font-size: 17px;
   font-weight: 600;
   line-height: 24px;
   color: $black;
+}
+
+.product__image-wrap {
+  width: 260px;
+  height: 195px;
+  margin: 0;
+
+  background-color: $grey;
 }
 
 .product__specifics {
@@ -16,4 +31,36 @@
   font-weight: 600;
   line-height: 24px;
   color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .product {
+    align-items: flex-end;
+  }
+
+  .product__image-wrap {
+    position: absolute;
+    left: 0;
+
+    width: 334px;
+    height: 334px;
+  }
+
+  .product__price {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    align-items: flex-start;
+  }
+
+  .product__image-wrap {
+    position: static;
+
+    width: 316px;
+    height: 462px;
+  }
 }

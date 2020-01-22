@@ -6,6 +6,7 @@
 }
 
 .contacts__title {
+  @include mobile-section-title;
   font-size: 18px;
 }
 

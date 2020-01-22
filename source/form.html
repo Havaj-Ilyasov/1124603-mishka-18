@@ -3,20 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Вязание на заказ</title>
+  <title>Вязаниеf на заказ</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
   <header class="page-header">
     <a class="page-header__logo logo">
-      <img class="logo__image" src="https://via.placeholder.com/86x35" width="86" height="35"
-        alt="Логотип интернет-магазина 'Мишка'">
+      <picture>
+        <source srcset="img/logo-desktop.svg" media="(min-width: 1150px)">
+        <source srcset="img/logo-tablet.svg" media="(min-width: 772px)">
+        <img class="logo__image" src="img/logo-mobile.svg" alt="Логотип интернет-магазина 'Мишка'">
+      </picture>
     </a>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle">Открыть меню</button>
+      <button class="main-nav__toggle"></button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a href="#" class="site-list__link">Каталог товаров</a>
@@ -36,15 +38,15 @@
     </nav>
   </header>
 
-  <main>
-
-    <h1 class="page-title">Вязание на заказ</h1>
-
-    <section class="knit-order">
+  <!-- <main>
+    <section class="order">
+      <div class="order__title-wrap">
+        <h1 class="order__title">Вязание на заказ</h1>
+      </div>
       <h2 class="visually-hidden">Форма для заказа</h2>
-      <p class="knit-order__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
-        свяжемся с вами, чтобы уточнить детали.</p>
-      <form class="knit-order__form form-order" action="https://echo.htmlacademy.ru.">
+      <p class="order__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
+        заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="order__form form-order" action="https://echo.htmlacademy.ru.">
         <fieldset class="form-order__group">
           <legend class="form-order__title">Тип</legend>
           <ul class="form-order__list">
@@ -115,46 +117,55 @@
               <input class="form-order__input" id="form-order__second-name" type="text" placeholder="Укажите фамилию*">
             </li>
             <li class="form-order__item">
-                <label for="form-order__patronymic">Отчество:</label>
-                <input class="form-order__input" id="form-order__patronymic" type="text" placeholder="Отчество, если желаете">
-              </li>
+              <label for="form-order__patronymic">Отчество:</label>
+              <input class="form-order__input" id="form-order__patronymic" type="text"
+                placeholder="Отчество, если желаете">
+            </li>
           </ul>
-
-            <label class="form-order__title" for="form-order__tel">Тел</label>
-            <input class="form-order__input" id="form-order__tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-
-            <label class="form-order__title" for="form-order__email">E-mail</label>
-            <input class="form-order__input" id="form-order__email" type="email" placeholder="Ваш Email*">
-
-            <label class="form-order__title" for="form-order__optionally">Доп</label>
-            <textarea class="form-order__textarea" id="form-order__optionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-
-            <small class="form-order__sub-text">*Поля обязательны для заполнения</small>
-            <button class="form-order__button" type="submit">Отправить заказ</button>
-
         </fieldset>
+
+        <fieldset class="form-order__group">
+          <label class="form-order__title" for="form-order__tel">Тел</label>
+          <input class="form-order__input" id="form-order__tel" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+        </fieldset>
+
+        <fieldset class="form-order__group">
+          <label class="form-order__title" for="form-order__email">E-mail</label>
+          <input class="form-order__input" id="form-order__email" type="email" placeholder="Ваш Email*">
+        </fieldset>
+
+        <fieldset class="form-order__group">
+          <label class="form-order__title" for="form-order__optionally">Доп</label>
+          <textarea class="form-order__textarea" id="form-order__optionally"
+            placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <small class="form-order__sub-text">*Поля обязательны для заполнения</small>
+        </fieldset>
+        <button class="form-order__button" type="submit">Отправить заказ</button>
       </form>
     </section>
-  </main>
+  </main> -->
 
   <footer class="page-footer">
+    <a class="page-footer__logo logo">
+      <img src="img/logo-footer.svg" alt="">
+    </a>
       <ul class="social">
         <li class="social__item">
           <a class="social__link" href="instagram.com">
             <span class="visually-hidden">Instagram</span>
-            <img src="https://via.placeholder.com/22x21" width="22" height="21" alt="Instagram">
+            <img src="img/icon-insta.svg" width="22" height="21" alt="Instagram">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="facebook.com">
             <span class="visually-hidden">Facebook</span>
-            <img src="https://via.placeholder.com/28x15" width="28" height="15" alt="Facebook">
+            <img src="img/icon-fb.svg" width="15" height="28" alt="Facebook">
           </a>
         </li>
         <li class="social__item">
           <a class="social__link" href="twitter.com">
             <span class="visually-hidden">Twitter</span>
-            <img src="https://via.placeholder.com/23x20" width="23" height="20" alt="Twitter">
+            <img src="img/icon-twitter.svg" width="23" height="20" alt="Twitter">
           </a>
         </li>
       </ul>
@@ -162,6 +173,11 @@
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="visually-hidden">HTML Academy</span>
+        <img src="img/logo-htmlacademy.svg" alt="Логотип 'HTML Academy'">
       </a>
     </div>
   </footer>
+
+</body>
+
+</html>

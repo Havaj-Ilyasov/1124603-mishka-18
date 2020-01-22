@@ -1,6 +1,24 @@
-@mixin resetList {
+@mixin reset-list {
   margin: 0;
   padding: 0;
 
   list-style: none;
+}
+
+@mixin mobile-section-title {
+  font-size: 25px;
+  line-height: 30px;
+  color: $black;
+}
+
+@mixin tablet-section-title {
+  font-size: 43px;
+  line-height: 50px;
+  color: $black;
+}
+
+@mixin desktop-section-title {
+  font-size: 53px;
+  line-height: 57px;
+  color: $black;
 }

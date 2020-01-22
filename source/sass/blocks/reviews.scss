@@ -5,8 +5,12 @@
   background-color: $white;
 }
 
+.reviews__title {
+  @include mobile-section-title;
+}
+
 .reviews__list {
-  @include resetList;
+  @include reset-list;
 }
 
 .reviews__text {
@@ -15,6 +19,10 @@
   font-size: 15px;
   line-height: 30px;
   color: $greyishBrown;
+}
+
+.reviews__quote {
+  margin: 0;
 }
 
 .reviews__author-name {

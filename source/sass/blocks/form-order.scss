@@ -1,9 +1,42 @@
 .form-order {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
   background-color: $white;
 }
 
 .form-order__group {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
   border: none;
+}
+
+.form-order__group:nth-child(1),
+.form-order__group:nth-child(2) {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.form-order__group:nth-child(3),
+.form-order__group:nth-child(4),
+.form-order__group:nth-child(5) {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.form-order__group:nth-child(6) {
+  padding-top: 23px;
+  padding-bottom: 30px;
+}
+
+.form-order__group:nth-child(3) .form-order__item {
+  display: flex;
+  flex-direction: column;
 }
 
 .form-order__title {
@@ -15,7 +48,7 @@
 }
 
 .form-order__list {
-  @include resetList;
+  @include reset-list;
 }
 
 .form-order__item {
@@ -35,6 +68,8 @@
 }
 
 .form-order__textarea {
+  resize: none;
+
   &::placeholder {
     font-family: "OpenSans", "Arial", sans-serif;
     font-size: 17px;
@@ -50,6 +85,8 @@
 }
 
 .form-order__button {
+  width: 100%;
+
   font-size: 17px;
   font-weight: 600;
   line-height: 16px;
@@ -57,4 +94,42 @@
   color: $greyishBrown;
 
   background-color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .form-order {
+    width: 772px;
+  }
+
+  .form-order__group {
+    flex-direction: row;
+
+    outline: 1px solid greenyellow;
+  }
+
+  .form-order__item {
+    font-size: 19px;
+  }
+
+  .form-order__input {
+    &::placeholder {
+      font-size: 19px;
+    }
+  }
+
+  .form-order__textarea {
+    &::placeholder {
+      font-size: 19px;
+    }
+  }
+
+  .form-order__sub-text {
+    font-size: 17px;
+  }
+
+  .form-order__button {
+    display: block;
+    width: 320px;
+    margin: 0 auto;
+  }
 }
