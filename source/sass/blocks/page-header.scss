@@ -1,6 +1,11 @@
 .page-header {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 22px;
-  padding-bottom: 22px;
+  padding-bottom: 30px;
 
   font-size: 17px;
   line-height: 24px;
@@ -9,6 +14,18 @@
   background-color: $white;
 }
 
-.main-nav__list {
-  @include resetList;
+@media (min-width: $tablet-width) {
+  .page-header {
+    position: relative;
+
+    display: flex;
+    max-height: 90px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    left: 50px;
+  }
 }

@@ -1,0 +1,19 @@
+.main-nav__toggle {
+  position: absolute;
+  top: 32px;
+  right: 50px;
+
+  width: 21px;
+  height: 20px;
+
+  background-color: $white;
+  background-image: url("../../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
