@@ -1,0 +1,36 @@
+.ad {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .ad {
+    @include reset-list;
+
+    position: absolute;
+    left: 0;
+    bottom: -42px;
+
+    display: flex;
+  }
+
+  .ad__item {
+    &:first-child {
+      margin-right: 62px;
+    }
+  }
+
+  .ad__link {
+    font-size: 15px;
+    font-weight: 600;
+    color: $black;
+  }
+
+  .ad__link:hover,
+  .ad__link:focus {
+    opacity: 0.6;
+  }
+
+  .ad__link:active {
+    opacity: 0.3;
+  }
+}

@@ -1,54 +1,370 @@
 .form-order {
-  width: 320px;
-  margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
-
   background-color: $white;
 }
 
 .form-order__group {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  margin: 0;
+  width: 260px;
+  margin: 0 auto;
   padding: 0;
+  padding-bottom: 20px;
 
   border: none;
 }
 
-.form-order__group:nth-child(1),
-.form-order__group:nth-child(2) {
-  padding-top: 40px;
-  padding-bottom: 50px;
-}
-
-.form-order__group:nth-child(3),
-.form-order__group:nth-child(4),
-.form-order__group:nth-child(5) {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.form-order__group:nth-child(6) {
-  padding-top: 23px;
-  padding-bottom: 30px;
-}
-
-.form-order__group:nth-child(3) .form-order__item {
-  display: flex;
-  flex-direction: column;
-}
-
 .form-order__title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 35px;
+
   font-size: 17px;
   font-weight: 600;
   line-height: 16px;
   text-transform: uppercase;
-  color: $seaFoamBlue;
+  color: $sea-foam-blue;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 62px;
+
+    width: 198px;
+    height: 1px;
+
+    background-color: $sea-foam-blue;
+
+    transform: translateY(50%);
+  }
+}
+
+.form-order__group .form-order__title {
+  margin-bottom: 30px;
+}
+
+.form-order__full-name .form-order__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 21px;
 }
 
 .form-order__list {
   @include reset-list;
+}
+
+.form-order__input {
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid $black;
+
+  &::placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    color: $grey-opacity;
+  }
+}
+
+.form-order__input:hover,
+.form-order__input:focus {
+  border-bottom-color: $sea-foam-blue;
+}
+
+.form-order__input:hover + .form-order__icon path,
+.form-order__input:focus + .form-order__icon path {
+  opacity: 1;
+
+  fill: $sea-foam-blue;
+}
+
+.form-order__input:active {
+  border-bottom-color: $sea-foam-blue;
+}
+
+.form-order__textarea {
+  // border: none;
+  border: 2px solid $greyish-brown;
+}
+
+.form-order__textarea:hover,
+.form-order__textarea:focus {
+  border-color: $sea-foam-blue;
+}
+
+.form-order__textarea:active {
+  border-color: $sea-foam-blue;
+}
+
+.form-order__icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+
+
+  transform: translateY(-50%);
+}
+
+.form-order__icon path {
+  opacity: 0.2;
+}
+
+.form-order__button {
+  width: 100%;
+  padding: 15px 0;
+
+  font-family: "OpenSans", sans-serif;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $greyish-brown;
+
+  background-color: $white;
+  border: 2px solid $black;
+}
+
+.form-order__button:hover,
+.form-order__button:focus {
+  color: $white;
+
+  background-color: $greyish-brown;
+}
+
+.form-order__button:active {
+  color: rgba($color: $white, $alpha: 0.3);
+
+  background-color: $greyish-brown;
+}
+
+// Группа полей "Тип"
+
+.form-order__type .form-order__list {
+  padding-left: 62px;
+}
+
+.form-order__type .form-order__item {
+  margin-right: 24px;
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-order__type .form-order__item-text {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: -62px;
+    bottom: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid $black;
+    border-radius: 50%;
+
+    transform: translateY(50%);
+  }
+}
+
+.form-order__type .form-order__item-text:hover::before,
+.form-order__type .form-order__item-text:focus::before {
+  border: 2px solid $sea-foam-blue;
+}
+
+.form-order__type .form-order__item-text:active::before {
+  border: 2px solid $black;
+
+  opacity: 0.3;
+}
+
+.form-order__type input[type="radio"]:checked + label {
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: -50px;
+    bottom: 50%;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: $sea-foam-blue;
+    border-radius: 50%;
+
+    transform: translateY(50%);
+  }
+}
+
+// Группа полей "Цвет"
+
+.form-order__color .form-order__list {
+  padding-left: 62px;
+}
+
+.form-order__color .form-order__item {
+  margin-bottom: 40px;
+}
+
+.form-order__color .form-order__item:last-child {
+  margin: 0;
+}
+
+.form-order__color .form-order__item-text {
+  position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: -62px;
+
+    width: 40px;
+    height: 39px;
+
+    border: 2px solid $black;
+
+    transform: translateY(-50%);
+  }
+}
+
+.form-order__color input[type="checkbox"]:checked + label {
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: -54px;
+
+    width: 22px;
+    height: 16px;
+
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-size: 22px 16px;
+
+    transform: translateY(-50%);
+  }
+}
+
+.form-order__color .form-order__item-text:hover::before,
+.form-order__color .form-order__item-text:focus::before {
+  border: 2px solid $sea-foam-blue;
+}
+
+.form-order__color .form-order__item-text:active::before {
+  border: 2px solid $black;
+
+  opacity: 0.3;
+}
+
+// Группа полей "ФИО"
+
+.form-order__full-name {
+  padding-bottom: 12px;
+}
+
+.form-order__full-name .form-order__item:last-child {
+  margin-bottom: 0;
+}
+
+.form-order__full-name .form-order__item-text {
+  margin-bottom: 3px;
+}
+
+.form-order__full-name .form-order__input {
+  padding: 15px 0;
+}
+
+// Группа полей "Тел"
+
+.form-order__group:nth-child(4) {
+  padding-bottom: 33px;
+}
+
+.form-order__tel .form-order__title {
+  margin-bottom: 7px;
+}
+
+.form-order__tel .form-order__input {
+  position: relative;
+
+  width: 100%;
+  padding: 15px 0;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    width: 5px;
+    height: 5px;
+
+    background-color: green;
+  }
+}
+
+// Группа полей "Email"
+
+.form-order__email {
+  padding-bottom: 33px;
+}
+
+.form-order__email .form-order__title {
+  margin-bottom: 8px;
+}
+
+.form-order__email .form-order__input {
+  width: 100%;
+  padding: 15px 0;
+}
+
+.form-order__icon--mail {
+  right: 4px;
+}
+
+// Группа полей "Доп"
+
+.form-order__add .form-order__title {
+  margin-bottom: 25px;
+}
+
+.form-order__add .form-order__textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 16px;
+  padding-right: 75px;
+  padding-bottom: 89px;
+
+  font-family: "OpenSans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: $black;
+
+  resize: none;
+  overflow: auto;
+
+  &::placeholder {
+    font-family: "OpenSans", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    color: $grey-opacity;
+  }
 }
 
 .form-order__item {
@@ -58,53 +374,44 @@
   color: $black;
 }
 
-.form-order__input {
-  &::placeholder {
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 18px;
-    color: $greyOpacity;
-  }
+.form-order__input-wrapper {
+  position: relative;
+
+  margin: 0;
 }
 
-.form-order__textarea {
-  resize: none;
-
-  &::placeholder {
-    font-family: "OpenSans", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 18px;
-    color: $greyOpacity;
-  }
+.form-order__input:-ms-input-placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: $grey-opacity;
 }
 
 .form-order__sub-text {
+  margin-bottom: 13px;
+
   font-size: 14px;
   line-height: 16px;
-  color: $greyishBrown;
-}
-
-.form-order__button {
-  width: 100%;
-
-  font-size: 17px;
-  font-weight: 600;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: $greyishBrown;
-
-  background-color: $white;
+  color: $greyish-brown;
 }
 
 @media (min-width: $tablet-width) {
-  .form-order {
-    width: 772px;
+  .form-order__group-wrapper {
+    background-color: $grey;
   }
 
   .form-order__group {
     flex-direction: row;
+    width: 668px;
 
-    outline: 1px solid greenyellow;
+    // outline: 1px solid tomato;
+  }
+
+  .form-order__title {
+    margin-right: 133px;
+
+    &::after {
+      display: none;
+    }
   }
 
   .form-order__item {
@@ -112,6 +419,8 @@
   }
 
   .form-order__input {
+    font-size: 19px;
+
     &::placeholder {
       font-size: 19px;
     }
@@ -125,11 +434,267 @@
 
   .form-order__sub-text {
     font-size: 17px;
+    line-height: 30px;
   }
 
   .form-order__button {
-    display: block;
-    width: 320px;
-    margin: 0 auto;
+    width: 230px;
+    margin: 0;
+  }
+
+  //Группа полей "Тип"
+
+  .form-order__type {
+    padding-bottom: 66px;
+  }
+
+  .form-order__type .form-order__list {
+    padding-left: 78px;
+  }
+
+  .form-order__type .form-order__item {
+    margin-bottom: 60px;
+  }
+
+  .form-order__type .form-order__item-text {
+    &::before {
+      left: -81px;
+
+      width: 52px;
+      height: 53px;
+    }
+  }
+
+  .form-order__type input[type="radio"]:checked + label {
+    &::after {
+      left: -66px;
+
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  // Группа полей "Цвет"
+
+  .form-order__color {
+    padding-top: 70px;
+  }
+
+  .form-order__color .form-order__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 210px;
+    // max-height: 210px;
+  }
+
+  .form-order__color .form-order__item {
+    width: 50%;
+    margin-bottom: 57px;
+  }
+
+  .form-order__color .form-order__item-text {
+    &::before {
+      left: -72px;
+
+      width: 54px;
+      height: 52px;
+    }
+  }
+
+  .form-order__color input[type="checkbox"]:checked + label {
+    &::after {
+      left: -60px;
+
+      width: 32px;
+      height: 22px;
+
+      background-size: 32px 22px;
+    }
+  }
+
+  // Группа полей "ФИО"
+
+  .form-order__full-name {
+    align-items: flex-start;
+    padding-top: 74px;
+    padding-bottom: 50px;
+  }
+
+  .form-order__full-name .form-order__title {
+    margin-right: 125px;
+  }
+
+  .form-order__full-name .form-order__list {
+    width: 100%;
+    margin-top: -16px;
+  }
+
+  .form-order__full-name .form-order__item {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  .form-order__full-name .form-order__item-text {
+    margin-right: 25px;
+  }
+
+  .form-order__full-name .form-order__input {
+    width: 100%;
+    padding-left: 15px;
+  }
+
+  // Группа полей "Тел"
+
+  .form-order__tel {
+    align-items: flex-start;
+    padding-top: 68px;
+  }
+
+  .form-order__tel .form-order__input-wrapper {
+    width: 100%;
+    margin-top: -15px;
+  }
+
+  .form-order__tel .form-order__input {
+    padding-left: 17px;
+  }
+
+  .form-order__tel .form-order__icon {
+    right: 25px;
+  }
+
+  // Группа полей "E-mail"
+
+  .form-order__email {
+    padding-top: 20px;
+  }
+
+  .form-order__email .form-order__title {
+    margin-right: 110px;
+  }
+
+  .form-order__email .form-order__input-wrapper {
+    width: 100%;
+    margin-top: -14px;
+  }
+
+  .form-order__email .form-order__input {
+    padding-left: 29px;
+  }
+
+  .form-order__email .form-order__icon {
+    right: 24px;
+  }
+
+  // Группа полей "Доп"
+
+  .form-order__add {
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 63px;
+  }
+
+  .form-order__add .form-order__title {
+    margin-top: -119px;
+    margin-right: 0;
+  }
+
+  .form-order__add .form-order__textarea {
+    width: 501px;
+    max-width: 501px;
+    margin-left: auto;
+    margin-bottom: 50px;
+  }
+
+  .form-order__add .form-order__sub-text {
+    order: 1;
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-order__group {
+    width: 1050px;
+    padding-left: 64px;
+  }
+
+  .form-order__group .form-order__title {
+    margin-right: 77px;
+  }
+
+  // Группа полей "Цвет"
+
+  .form-order__color {
+    padding-top: 65px;
+  }
+
+  .form-order__color .form-order__list {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    height: 150px;
+  }
+
+  .form-order__color .form-order__item {
+    width: 33%;
+    margin: 0;
+  }
+
+  .form-order__color .form-order__item:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  // Группа полей "ФИО"
+
+  .form-order__full-name {
+    padding-top: 58px;
+    padding-right: 175px;
+  }
+
+  // Группа полей "Тел"
+
+  .form-order__tel {
+    padding-right: 175px;
+  }
+
+  .form-order__tel .form-order__icon {
+    right: 7px;
+  }
+
+  // Группа полей "E-mail"
+
+  .form-order__email {
+    padding-right: 175px;
+  }
+
+  .form-order__email .form-order__title {
+    margin-right: 61px;
+  }
+
+  .form-order__email .form-order__icon {
+    right: 4px;
+  }
+
+  // Группа полей "Доп"
+
+  .form-order__add {
+    padding-right: 175px;
+  }
+
+  .form-order__add .form-order__title {
+    margin-right: 70px;
+  }
+
+  .form-order__add .form-order__textarea {
+    width: 700px;
+    max-width: 700px;
+  }
+
+  .form-order__button {
+    margin-left: 110px;
   }
 }

@@ -8,6 +8,7 @@
 @mixin mobile-section-title {
   font-size: 25px;
   line-height: 30px;
+  font-weight: 600;
   color: $black;
 }
 
@@ -21,4 +22,25 @@
   font-size: 53px;
   line-height: 57px;
   color: $black;
+}
+
+@mixin mobile-wrapper {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin tablet-wrapper {
+  width: 768px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@mixin desktop-wrapper {
+  width: 1150px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
 }
