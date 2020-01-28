@@ -32,6 +32,11 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -47,7 +52,7 @@ a {
 }
 
 .page-title--color {
-  color: $veryDark;
+  color: $very-dark;
 }
 
 .section-title {

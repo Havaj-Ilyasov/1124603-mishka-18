@@ -1,53 +1,114 @@
 .modal {
-  position: relative;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  width: 320px;
+  margin: 0 auto;
+
+  text-align: center;
 
   background-color: $white;
-  border: 1px solid $greyBorder;
+  border: 1px solid $border-grey;
 
-  &::before {
-    content: "";
+}
 
-    position: absolute;
-    top: 0;
-    z-index: 1;
+.modal__wrapper {
+  width: 260px;
+  margin: 0 auto;
 
-    width: 100%;
-    height: 100%;
+  padding-top: 35px;
+  padding-bottom: 45px;
 
-    background-color: tomato;
-  }
 }
 
 .modal__title {
   @include mobile-section-title;
+
+  margin: 0;
+  margin-bottom: 15px;
+
+  text-align: center;
   text-transform: uppercase;
 }
 
 .modal__subtitle {
+  margin: 0;
+  margin-bottom: 35px;
+
   font-size: 15px;
   line-height: 30px;
-  color: $greyishBrown;
+  color: $greyish-brown;
 }
 
 .modal__list {
   @include reset-list;
+
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
 }
 
 .modal__item {
   font-size: 17px;
   font-weight: 600;
   line-height: 16px;
-  color: $greyishBrown;
+  color: $greyish-brown;
+}
+
+.modal__size-text {
+  padding: 10px 25px;
+
+  border: 2px solid rgba($color: $border-grey, $alpha: 0.5);
+}
+
+.modal__size-text:hover,
+.modal__size-text:focus {
+  border-color: rgba($color: $border-grey, $alpha: 1.0);
+}
+
+.modal__size-text:active {
+  border-color: rgba($color: $sea-foam-blue, $alpha: 1.0);
 }
 
 .modal__button {
+  width: 100%;
+  padding: 15px 0;
+
   font-size: 17px;
   line-height: 16px;
+  font-weight: 600;
+  font-family: "OpenSans", "Tahoma", sans-serif;
   text-transform: uppercase;
   color: $white;
 
-  background-color: $seaFoamBlue;
+  background-color: $sea-foam-blue;
   border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    width: 575px;
+  }
+
+   .modal__wrapper {
+    width: 354px;
+  }
+
+  .modal__title {
+    display: block;
+    max-width: 361px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal__subtitle {
+    font-size: 17px;
+  }
+
+  .modal__list {
+    justify-content: space-between;
+  }
+
+  .modal__size-text {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }

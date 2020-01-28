@@ -1,41 +1,154 @@
 .site-list {
   @include reset-list;
 
-  text-align: center;
+  display: none;
+
+  position: absolute;
+  z-index: 1;
+
+  width: 100%;
+
+  outline: 1px solid $border-grey;
 }
 
 .site-list__item {
+  position: relative;
+
   padding-top: 30px;
+  padding-left: 75px;
   padding-bottom: 30px;
+
+  text-align: left;
+
+  background-color: $white;
+
+  // outline: 1px solid orange;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $border-grey;
+  }
 }
 
-.site-list__item:last-child {
-  padding-bottom: 0;
+.site-list__item:first-child {
+  &::before {
+    content: none;
+  }
 }
+
+.site-list__item-search,
+.site-list__item-cart {
+    padding-left: 31px;
+  }
+
+// .site-list__item:nth-child(1) {
+//   padding-top: 27px;
+// }
+
+// .site-list__item:nth-child(2) {
+//   padding-top: 27px;
+// }
+
+// .site-list__item:nth-child(3) {
+//   padding-top: 25px;
+// }
+
+// .site-list__item:nth-child(4) {
+//   padding-top: 24px;
+//   padding-bottom: 13px;
+// }
 
 .site-list__link {
+  position: relative;
+
   font-size: 17px;
   font-weight: 600;
   line-height: 24px;
   color: $black;
+
+  &:hover,
+  &:focus {
+    color: rgba($color: $black, $alpha: 0.6);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.site-list__icon {
+  margin-right: 21px;
+}
+
+.site-list__icon path {
+  opacity: 0.2;
+}
+
+.site-list__link:hover .site-list__icon path,
+.site-list__link:focus .site-list__icon path {
+  opacity: 1;
+
+  fill: $sea-foam-blue;
+}
+
+.site-list__link:active .site-list__icon path {
+  // opacity: 0.3;
+
+  fill: $sea-foam-blue;
 }
 
 @media (min-width: $tablet-width) {
   .site-list {
+    position: static;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 772px;
-    padding-left: 50px;
-    padding-right: 50px;
+
+    outline: none;
+  }
+
+  .site-list .site-list__item {
+    padding: 0;
   }
 
   .site-list__item {
-    padding: 0;
+    &::before {
+      display: none;
+    }
+  }
+
+  .site-list__item-search,
+  .site-list__item-cart {
+    &::before {
+      display: block;
+      width: 1px;
+      height: 100%;
+    }
+  }
+
+  .site-list__item {
+    display: flex;
+
+    background-color: transparent;
   }
 
   .site-list__item:nth-child(1) {
     order: 3;
+    margin-right: 18px;
+  }
+
+  .site-list__item:nth-child(1) .site-list__link,
+  .site-list__item:nth-child(2) .site-list__link {
+    padding-top: 20px;
   }
 
   .site-list__item:nth-child(2) {
@@ -44,22 +157,87 @@
 
   .site-list__item:nth-child(3) {
     position: relative;
-
-    width: 72px;
-    margin-left: 356px;
-
-    outline: 1px solid grey;
   }
 
-  .site-list__item:nth-child(3) .site-list__link {
-    display: block;
+  .site-list__item-search {
+    margin-left: 320px;
+  }
 
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
+  .site-list__item-search .site-list__link {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
 
-    background-image: url("../../img/icon-search.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
+    font-size: 0;
+  }
+
+  .site-list__item-cart .site-list__link {
+    display: flex;
+    align-items: center;
+    padding-left: 39px;
+  }
+
+  .site-list__item-cart .site-list__icon {
+    margin-right: 29px;
+  }
+
+  .site-list__link {
+    padding-top: 30px;
+    padding-bottom: 34px;
+  }
+
+  .site-list__icon {
+    margin-right: 0;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__item:nth-child(1) {
+    order: 1;
+    margin: 0;
+
+    &::before {
+      left: 100%;
+
+      display: block;
+      width: 1px;
+      height: 100%;
+    }
+  }
+
+  .site-list__item:nth-child(1) .site-list__link,
+  .site-list__item:nth-child(2) .site-list__link {
+    padding-top: 30px;
+  }
+
+  .site-list__item:nth-child(1) .site-list__link {
+    padding-right: 35px;
+  }
+
+  .site-list__item:nth-child(2) {
+    order: 2;
+  }
+
+  .site-list__item:nth-child(2) .site-list__link {
+    padding-left: 35px;
+  }
+
+  .site-list__item:nth-child(3) {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .site-list__item:nth-child(4) {
+    order: 4;
+  }
+
+  // .site-list__item:last-child {
+  //   margin-left: auto;
+  // }
+
+  .site-list__item-search {
+    margin: 0;
   }
 }

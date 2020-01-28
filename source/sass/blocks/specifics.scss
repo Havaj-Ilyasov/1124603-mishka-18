@@ -1,0 +1,43 @@
+.specifics {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 260px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  font-size: 15px;
+  line-height: 20px;
+  color: $greyish-brown;
+}
+
+.specifics__group {
+  width: 100%;
+
+  border-bottom: 1px solid $border-grey;
+}
+
+.specifics__field {
+  display: inline-block;
+  width: 67px;
+  max-width: 67px;
+  margin: 0;
+  margin-right: 26px;
+  padding: 10px 0;
+}
+
+.specifics__value {
+  display: inline-block;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .specifics {
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .specifics {
+    margin-bottom: 108px;
+  }
+}

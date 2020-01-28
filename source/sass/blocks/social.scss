@@ -7,6 +7,18 @@
   margin-bottom: 58px;
 }
 
+.social__link:hover .social__icon path,
+.social__link:focus .social__icon path {
+  fill: $sea-foam-blue;
+}
+
+.social__link:active .social__icon path {
+  opacity: 0.3;
+
+  fill: $sea-foam-blue;
+
+}
+
 .social__item:not(:last-child) {
   margin-right: 40px;
 }

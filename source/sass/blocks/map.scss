@@ -1,0 +1,27 @@
+.map {
+  width: 320px;
+  height: 457px;
+  max-height: 457px;
+  margin: 0 auto;
+  margin-bottom: 33px;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    width: 768px;
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+
+    width: 525px;
+    height: 457px;
+    margin: 0;
+  }
+}
+

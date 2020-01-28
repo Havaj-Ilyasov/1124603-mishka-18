@@ -1,9 +1,13 @@
 .promo {
   min-height: 490px;
-  padding-top: 76px;
+}
 
-  background-color: $promoBgGrey;
-  background-image: url("../../img/hero-mobile@1x.jpg");
+.promo__wrapper {
+  @include mobile-wrapper;
+
+  padding-top: 72px;
+
+  background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -15px;
 }
@@ -14,6 +18,7 @@
   margin-bottom: 120px;
 
   @include mobile-section-title;
+
   font-size: 27px;
   text-align: center;
 }
@@ -27,58 +32,98 @@
 }
 
 .promo__item {
-  position: relative;
-  z-index: 0;
-
   width: 320px;
 
   &:nth-child(1) {
-    background-color: $seaFoamBlue;
+    background-color: $sea-foam-blue;
   }
 
   &:nth-child(2) {
-    background-color: $greenyBlue;
+    background-color: $greeny-blue;
+  }
+}
+
+.promo__item:nth-child(1) .promo__link {
+  &::after {
+    width: 40px;
+    height: 62px;
+
+    background-image: url("../img/icon-interior.svg");
+  }
+}
+
+.promo__item:nth-child(2) .promo__link {
+  &::after {
+    right: 27px;
+
+    width: 60px;
+    height: 59px;
+
+    background-image: url("../img/icon-toy.svg");
   }
 }
 
 .promo__link {
-  display: inline-block;
-  max-width: 150px;
-  padding-top: 30px;
+  position: relative;
+
+  display: block;
+  width: 100%;
+  padding-top: 28px;
   padding-left: 29px;
-  padding-bottom: 30px;
+  padding-bottom: 27px;
 
   font-size: 19px;
   font-weight: 600;
   line-height: 24px;
   color: $white;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 35px;
+
+    opacity: 0.5;
+
+    background-repeat: no-repeat;
+  }
 }
 
-.promo__link::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-  width: 100%;
-  height: 100%;
+.promo__link-text {
+  display: inline-block;
+  max-width: 150px;
 }
 
 @media (min-width: $tablet-width) {
   .promo {
-    padding-top: 161px;
-    padding-left: 50px;
-    padding-right: 50px;
+    position: relative;
 
-    background-image: url("../../img/hero-tablet@1x.jpg");
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -20px;
+
+      width: 100%;
+      height: 34px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: auto 24px;
+    }
+  }
+
+  .promo__wrapper {
+    @include tablet-wrapper;
+
+    padding-top: 152px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
     background-position: center top;
   }
 
   .promo__title {
     max-width: 500px;
-    margin-bottom: 370px;
+    margin-bottom: 372px;
 
     @include tablet-section-title;
   }
@@ -91,12 +136,44 @@
   .promo__item {
     width: 334px;
   }
+
+  .promo__item:nth-child(2) .promo__link {
+    &::after {
+      right: 35px;
+    }
+  }
+
+  .promo__link {
+    padding-top: 29px;
+    padding-left: 35px;
+    padding-bottom: 29px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .promo__link:hover,
+  .promo__link:focus {
+    transform: translateY(-5px);
+  }
+
+  .promo__link:active {
+    opacity: 0.3;
+  }
+
 }
 
 @media (min-width: $desktop-width) {
   .promo {
-    background-image: url("../../img/hero-desktop@1x.jpg");
-    background-position: center top;
+    &::after {
+      background-size: auto 34px;
+    }
+  }
+
+  .promo__wrapper {
+    @include desktop-wrapper;
+
+    background-image: url("../img/hero-desktop@1x.jpg");
   }
 
   .promo__title {
@@ -108,5 +185,9 @@
 
   .promo__item {
     width: 525px;
+  }
+
+  .promo__link {
+    padding-top: 32px;
   }
 }

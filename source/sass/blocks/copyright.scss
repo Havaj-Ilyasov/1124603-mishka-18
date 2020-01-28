@@ -10,3 +10,14 @@
   line-height: 28px;
   color: $black;
 }
+
+.copyright__link:hover .copyright__icon path,
+.copyright__link:focus .copyright__icon path {
+  fill: $sea-foam-blue;
+}
+
+.copyright__link:active .copyright__icon path {
+  opacity: 0.3;
+
+  fill: $sea-foam-blue;
+}
