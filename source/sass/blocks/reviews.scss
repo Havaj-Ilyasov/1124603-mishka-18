@@ -88,11 +88,9 @@
   background-color: $greyish-brown;
 }
 
-.reviews__button-write {
-  &:active {
-    color: rgba($color: $white, $alpha: 0.6);
-    background-color: $greyish-brown;
-  }
+.reviews__button-write:active {
+  color: rgba($color: $white, $alpha: 0.6);
+  background-color: $greyish-brown;
 }
 
 .reviews__button-group {

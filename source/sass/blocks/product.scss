@@ -102,7 +102,7 @@
 }
 
 .product__cart:hover path,
-.product__cart:focus path  {
+.product__cart:focus path {
   opacity: 1;
 
   fill: $sea-foam-blue;
@@ -139,6 +139,7 @@
 
   .product__price {
     margin-top: auto;
+    margin-left: 333px;
 
     font-size: 17px;
 
@@ -154,10 +155,6 @@
   .product__price,
   .product__cart {
     margin-left: 333px;
-  }
-
-  .product__price {
-    margin-left: 338px;
   }
 
   .product__cart {

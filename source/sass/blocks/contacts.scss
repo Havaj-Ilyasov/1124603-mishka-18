@@ -94,12 +94,10 @@
   background-color: $greyish-brown;
 }
 
-.contacts__write {
-  &:active {
-    color: rgba($color: $white, $alpha: 0.3);
+.contacts__write:active {
+  color: rgba($color: $white, $alpha: 0.3);
 
-    background-color: $greyish-brown;
-  }
+  background-color: $greyish-brown;
 }
 
 @media (min-width: $tablet-width) {
@@ -179,7 +177,6 @@
 
 @media (min-width: $desktop-width) {
   .contacts {
-
     padding-bottom: 103px;
   }
 
@@ -187,6 +184,7 @@
     position: relative;
 
     width: 1150px;
+    margin: 0 auto;
     padding-right: 50px;
   }
 
